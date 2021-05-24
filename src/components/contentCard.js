@@ -6,6 +6,10 @@ export default function ContentCard(props) {
             </div>
             <ul className="list-group list-group-flush">
                 <li className="list-group-item">
+                    <span className="bold">ID: </span>
+                    {props.data.id}
+                </li>
+                <li className="list-group-item">
                     <span className="bold">Alert: </span>
                     {props.data.alert}
                 </li>
@@ -17,7 +21,7 @@ export default function ContentCard(props) {
                     <span className="bold">Description: </span>
                     {props.data.description.length > 50 ?
                         <div>{props.data.description.substring(0, 50) + "..."}
-                        <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_desc"}>Read more</a>
+                            <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_desc"}>Read more</a>
                         </div> :
                         props.data.description}
                 </li>
@@ -25,7 +29,7 @@ export default function ContentCard(props) {
                     <span className="bold">Soution: </span>
                     {props.data.solution.length > 50 ?
                         <div>{props.data.solution.substring(0, 50) + "..."}
-                        <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_sol"}>Read more</a>
+                            <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_sol"}>Read more</a>
                         </div> :
                         props.data.solution}
                 </li>
@@ -33,7 +37,7 @@ export default function ContentCard(props) {
                     <span className="bold">Evidence: </span>
                     {props.data.evidence.length > 50 ?
                         <div>{props.data.evidence.substring(0, 50) + "..."}
-                        <a href="#" className="text-primary"data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_evid"}>Read more</a>
+                            <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_evid"}>Read more</a>
                         </div> :
                         props.data.evidence}
                 </li>

@@ -6,14 +6,12 @@ const axios=require("axios");
 
 export default function Main() {
     const [data, setData] = useState([]);
-    const url="http://localhost:5000/api";
+    const url="http://localhost:5000/api/data";
     useEffect(() => {
         async function getData(url) {
             try {
                 const response = await axios.get(url);
                 const remoteData = response.data;
-                console.log(response);
-                console.log(remoteData);
                 setData(remoteData);
             }
             catch (e) {

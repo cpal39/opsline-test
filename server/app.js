@@ -5,7 +5,7 @@ const axios = require("axios");
 
 app.use(cors());
 
-app.get("/api/",async(req,res)=>{
+app.get("/api/data",async(req,res)=>{
     const url = 'https://gist.githubusercontent.com/cpal39/7081859ea04b90ac2522e84ea6189f3b/raw/4814c4eb63ecfbdd5bcc32a20bf4c9cb72aa0f2e/data.json';
 	try{
 		const {data}=await axios.get(url);
