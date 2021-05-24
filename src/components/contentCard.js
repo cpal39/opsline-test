@@ -21,7 +21,7 @@ export default function ContentCard(props) {
                     <span className="bold">Description: </span>
                     {props.data.description.length > 50 ?
                         <div>{props.data.description.substring(0, 50) + "..."}
-                            <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_desc"}>Read more</a>
+                            <span className="text-primary link" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_desc"}>Read more</span>
                         </div> :
                         props.data.description}
                 </li>
@@ -29,7 +29,7 @@ export default function ContentCard(props) {
                     <span className="bold">Soution: </span>
                     {props.data.solution.length > 50 ?
                         <div>{props.data.solution.substring(0, 50) + "..."}
-                            <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_sol"}>Read more</a>
+                            <span className="text-primary link" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_sol"}>Read more</span>
                         </div> :
                         props.data.solution}
                 </li>
@@ -37,7 +37,7 @@ export default function ContentCard(props) {
                     <span className="bold">Evidence: </span>
                     {props.data.evidence.length > 50 ?
                         <div>{props.data.evidence.substring(0, 50) + "..."}
-                            <a href="#" className="text-primary" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_evid"}>Read more</a>
+                            <span className="text-primary link" data-bs-toggle="modal" data-bs-target={"#_" + props.data.id + "_evid"}>Read more</span>
                         </div> :
                         props.data.evidence}
                 </li>
