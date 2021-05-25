@@ -1,3 +1,8 @@
+/**
+ * simple card to display information each data item
+ * props are the properties of the objects in data.json
+ * if the value for a property is too long, a "read more" option will appear and a modal can be displayed to show the rest of the information
+ */
 export default function ContentCard(props) {
     return (
         <div className="card">

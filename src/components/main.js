@@ -5,9 +5,13 @@ import localData from '../localData/data.json';
 const axios = require("axios");
 
 export default function Main() {
+    //data from data.json
     const [data, setData] = useState([]);
+    //current order data is displayed in, ascending or descending
     const [curOrder, setOrder] = useState("des");
+    //api endpoint to request the data
     const url = "http://localhost:5000/api/data";
+    //retrieve the value from sort drop down and sort data accordingly
     const sortBy = (event) => {
         const sortParam = event.target.value;
         const newData = [...data];
@@ -31,6 +35,7 @@ export default function Main() {
         }
         setData(newData);
     }
+    //compare selected order with current order and reverse data if necessary
     const orderBy = (event) => {
         const orderParam = event.target.value;
         const newData = [...data];
@@ -39,6 +44,7 @@ export default function Main() {
             setData(newData.reverse());
         }
     }
+    //retrieve the data from the endpoint, if there's an error, use local data.json file instead
     useEffect(() => {
         async function getData(url) {
             try {
@@ -63,9 +69,9 @@ export default function Main() {
                             <select onChange={sortBy} className="form-select form-select-lg mb-3" aria-label=".form-select-lg example" defaultValue="severity_level">
                                 <option value="name">Name</option>
                                 <option value="id">ID</option>
-                                <option value="application">Application</option>
-                                <option value="severity_level">Severity level</option>
                                 <option value="alert">Alert</option>
+                                <option value="severity_level">Severity level</option>
+                                <option value="application">Application</option>
                             </select>
                         </div>
                         <div className="col-md-4 col-sm-12">
@@ -79,6 +85,10 @@ export default function Main() {
             </div>
             <div className="container">
                 <div className="row contentRow">
+                    {/**
+                     * for each item, create its content card and modal for description, solution, and evidence
+                     */ 
+                    }
                     {data.map((item, id) => {
                         return <div key={id} className="col-lg-4 col-md-6 col-sm-12 cardDiv">
                             <ContentCard data={item} />

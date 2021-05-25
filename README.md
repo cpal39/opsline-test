@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Description of the problem
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Part One:
+Construct a webpage to display information to prospective users from the provided data subset attached to this email. How you choose to design this webpage is up to you - the only requirement is that the framework used must be React-based.
 
-## Available Scripts
+Part Two (Additional Credit / Optional):
+Set up an API endpoint that allows you to request the same data, and retrieve the data for your webpage asynchronously from this source. You will need to first store the data (whether in a database or otherwise), and then setup the means for access.
 
-In the project directory, you can run:
+# Design Approach
 
-### `npm start`
+To display the information in an easy and accessible way, I felt using bootstrap cards and modals was the best approach. Since the only necessary operations at this time are for users to view the data, it made more sense to me to display the more in-depth information for each object (full description, solution, evidence) on the same page using modals instead of having the user go to a different page for each object. The data can be sorted by name, id, alert, severity level, and application. By default, the data is sorted by severity level in descending order to show the most urgent objects first. All aspects of the webpage are responsive for best viewing on any screen.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Endpoint Setup
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Since the only operation is to view the data, setting up a database for asynchronous access didn't feel necessary and the data is instead stored in a secret gist. ExpressJs along with Axios was used to setup an endpoint to acess the data from the gist and then serve it on port 5000. In the event that fetching the data from the endpoint fails, a local data.json file will be used instead to display the data.
 
-### `npm test`
+# Run instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Download or clone the repo
+- CD into the folder
+- Do `npm i`
+- Then do `npm start`

@@ -1,3 +1,7 @@
+/**
+ * simple modal to display the information that was too long to be shown in the card
+ * modal title will include object name and the property name being displayed
+ */
 export default function Details(props) {
     return (
         <div className="modal fade" id={"_" + props.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
