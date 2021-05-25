@@ -1,4 +1,4 @@
-# Description of the problem
+# Description of the Problem
 
 Part One:
 Construct a webpage to display information to prospective users from the provided data subset attached to this email. How you choose to design this webpage is up to you - the only requirement is that the framework used must be React-based.
@@ -14,7 +14,7 @@ To display the information in an easy and accessible way, I felt using bootstrap
 
 Since the only operation is to view the data, setting up a database for asynchronous access didn't feel necessary and the data is instead stored in a secret gist. ExpressJs along with Axios was used to setup an endpoint to acess the data from the gist and then serve it on port 5000. In the event that fetching the data from the endpoint fails, a local data.json file will be used instead to display the data.
 
-# Run instructions
+# Run Instructions
 
 - Download or clone the repo
 - cd into the folder

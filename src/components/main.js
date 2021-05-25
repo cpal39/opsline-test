@@ -11,7 +11,7 @@ export default function Main() {
     const [curOrder, setOrder] = useState("des");
     //api endpoint to request the data
     const url = "http://localhost:5000/api/data";
-    //retrieve the value from sort drop down and sort data accordingly
+    //retrieve the value from sort dropdown and sort data accordingly
     const sortBy = (event) => {
         const sortParam = event.target.value;
         const newData = [...data];
@@ -86,7 +86,7 @@ export default function Main() {
             <div className="container">
                 <div className="row contentRow">
                     {/**
-                     * for each item, create its content card and modal for description, solution, and evidence
+                     * for each item, create its content card and modals for description, solution, and evidence
                      */ 
                     }
                     {data.map((item, id) => {
