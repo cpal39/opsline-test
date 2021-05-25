@@ -38,7 +38,6 @@ export default function Main() {
     /**
      * start with allData and then filter it out based on the search term to get the data to display
      * filter based on if searchBy includes the search term
-     * then sort the data to match currently selected sort options
      * if no search term was provided, revert back to showing all data
      */
     const doSearch = () => {
