@@ -17,6 +17,6 @@ Since the only operation is to view the data, setting up a database for asynchro
 # Run instructions
 
 - Download or clone the repo
-- CD into the folder
+- cd into the folder
 - Do `npm i`
 - Then do `npm start`
