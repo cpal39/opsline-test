@@ -64,15 +64,19 @@
   cursor: pointer;
 }
 
-.sortRow {
-  padding-top: 15px;
-  /* align-self: flex-start; */
+.searchRow {
+  padding-top: 10px;
   position: sticky;
   top: 55px;
   z-index: 1;
   background-color: rgb(55, 59, 63);
+  color: white;
 }
 
 .contentRow{
   z-index: 0;
+}
+
+.searchBar,.buttonDiv{
+  padding-bottom: 15px;
 }
