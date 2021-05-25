@@ -28,3 +28,4 @@ When a user hits the search button, doSearch() is called and allData is filtered
 - cd into the folder
 - Do `npm i`
 - Then do `npm start`
+- In a web browser go to `http://localhost:3000` if not automatically taken there
