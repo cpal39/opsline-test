@@ -31,7 +31,7 @@ export default function Main() {
     const updateSortBy = (event) => {
         setSortBy(event.target.value);
     }
-    //compare selected order with current order and reverse data if necessary
+    //update what to order by
     const updateOrderBy = (event) => {
         setOrderBy(event.target.value);
     }
@@ -58,7 +58,7 @@ export default function Main() {
     }
     //use the value from sort dropdown to sort data accordingly
     const doSort = () => {
-        let newData=[...data];
+        let newData = [...data];
         newData.sort(function (a, b) {
             if (sortBy === "id" || sortBy === "severity_level") {
                 return a[sortBy] - b[sortBy];
