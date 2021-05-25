@@ -16,7 +16,7 @@ Since the only operation is to view the data, setting up a database for asynchro
 
 # How It Works
 
-There are 4 components: main (the page to display the content), contentCards (modelling the card for each object), navBar (just the navigation bar), and details (the modals for the longer information for each card). In main, once the API call is made, the data is set to either the remote data or local data based on whether the request is successful. The data is then looped through to create and display the content cards, as well as create the three modals for each object that have an ID of the form _<objectId>_desc, _<objectId>_sol, _<objectId>_evid (the IDs were set up this way so the "read more" links on the cards can easily trigger the correct modal). 
+There are 4 components: main (the page to display the content), contentCards (modelling the card for each object), navBar (just the navigation bar), and details (the modals for the longer information for each card). In main, once the API call is made, the data is set to either the remote data or local data based on whether the request is successful. The data is then looped through to create and display the content cards, as well as create the three modals for each object that have an ID of the form "_objectId_desc", "_objectId_sol", and "_objectId_evid" (the IDs were set up this way so the "read more" links on the cards can easily trigger the correct modal). 
 
 State is used to keep track of allData (all data from the json), data (data to be displayed), searchBy (the property to search inside of), searchTerm (the user's input to look for in searchBy), sortBy (the current property to sort by) and orderBy (whether data should be sorted in ascending or descending order).
 
