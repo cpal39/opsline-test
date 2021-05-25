@@ -18,6 +18,10 @@ export default function ContentCard(props) {
                     {props.data.severity_level}
                 </li>
                 <li className="list-group-item">
+                    <span className="bold">Application: </span>
+                    {props.data.application}
+                </li>
+                <li className="list-group-item">
                     <span className="bold">Description: </span>
                     {props.data.description.length > 50 ?
                         <div>{props.data.description.substring(0, 50) + "... "}

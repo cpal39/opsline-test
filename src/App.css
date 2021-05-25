@@ -63,3 +63,16 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+.sortRow {
+  padding-top: 15px;
+  /* align-self: flex-start; */
+  position: sticky;
+  top: 55px;
+  z-index: 1;
+  background-color: rgb(55, 59, 63);
+}
+
+.contentRow{
+  z-index: 0;
+}
